@@ -25,6 +25,7 @@ You can open pgAdmin here:
 You can open Portainer here:
 
     URL: https://[CI_CD_DOMAIN]/portainer
+    login: "admin"
     password: "[ADMIN_PASSWORD]"
 
 You can open Minio here:
@@ -34,6 +35,16 @@ You can open Minio here:
     password: "[ADMIN_PASSWORD]"
 
 # AppFlowy Cloud - User Guide
+
+## Features Under Development
+
+Sharing and Publishing:
+At the moment, you cannot share or publish content. This feature is being actively worked on.
+<a href="https://github.com/AppFlowy-IO/AppFlowy-Cloud/issues/873#issuecomment-2417012163">Issue #873 on GitHub</a>
+
+User Invitations:
+Inviting users through the application is not yet available. This feature is also in progress.
+<a href="https://github.com/AppFlowy-IO/AppFlowy-Cloud/issues/873#issuecomment-2417012163">Issue #873 on GitHub</a>
 
 ## Prerequisites
 
