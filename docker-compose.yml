@@ -175,7 +175,6 @@ services:
     depends_on:
       - portainer
     image: alpine/curl
-    restart: always
     environment:
       - PORTAINER_PASSWORD=${PORTAINER_PASSWORD}
     volumes:
