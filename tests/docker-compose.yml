@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  web:
+    image: elestio4test/catodon:${SOFTWARE_VERSION_TAG}
+    restart: always
+    links:
+      - db
+      - redis
+    depends_on:
+      - db
+      - redis
+    environment:
+      NODE_ENV: production
+    ports:
+      - "172.17.0.1:62183:3000"
+    volumes:
+      - ./storage/files:/iceshrimp/files
+      - ./storage/catodon/.config:/iceshrimp/.config:ro
+
+  redis:
+    restart: always
+    image: elestio/redis:7.0
+    volumes:
+      - ./storage/redis:/data
+
+  db:
+    restart: always
+    image: groonga/pgroonga:latest
+    env_file:
+      - ./.env
+    volumes:
+      - ./storage/db:/var/lib/postgresql/data
+    ports:
+      - 172.17.0.1:35293:5432
